@@ -72,6 +72,37 @@ public class SwaggerConfigurationProperties
     private Map<String, DocketInfo> docket = new LinkedHashMap<>();
 
 
+    public SwaggerConfigurationProperties()
+    {
+
+    }
+
+    /**
+     * 构造方法
+     *
+     * @param title       标题
+     * @param group       组
+     * @param description 描述
+     * @param version     版本
+     * @param contact     联系
+     * @param basePackage 基本包
+     * @param basePath    基本路径
+     * @param excludePath 排除路径
+     * @param docket      摘要
+     */
+    public SwaggerConfigurationProperties(String title, String group, String description, String version, Contact contact, String basePackage, List<String> basePath, List<String> excludePath, Map<String, DocketInfo> docket)
+    {
+        this.title = title;
+        this.group = group;
+        this.description = description;
+        this.version = version;
+        this.contact = contact;
+        this.basePackage = basePackage;
+        this.basePath = basePath;
+        this.excludePath = excludePath;
+        this.docket = docket;
+    }
+
     /**
      * 获得组
      *
@@ -299,6 +330,36 @@ public class SwaggerConfigurationProperties
          */
         private List<String> excludePath = new ArrayList<>();
 
+
+        public DocketInfo()
+        {
+
+        }
+
+        /**
+         * 构造方法
+         *
+         * @param title       标题
+         * @param group       组
+         * @param description 描述
+         * @param version     版本
+         * @param contact     联系
+         * @param basePackage 基本包
+         * @param basePath    基本路径
+         * @param excludePath 排除路径
+         */
+        public DocketInfo(String title, String group, String description, String version, Contact contact, String basePackage, List<String> basePath, List<String> excludePath)
+        {
+            this.title = title;
+            this.group = group;
+            this.description = description;
+            this.version = version;
+            this.contact = contact;
+            this.basePackage = basePackage;
+            this.basePath = basePath;
+            this.excludePath = excludePath;
+        }
+
         /**
          * 获得组
          *
@@ -481,6 +542,25 @@ public class SwaggerConfigurationProperties
          */
         private String email = "";
 
+
+        public Contact()
+        {
+
+        }
+
+        /**
+         * 构造方法
+         *
+         * @param name  名字
+         * @param url   url
+         * @param email 电子邮件
+         */
+        public Contact(String name, String url, String email)
+        {
+            this.name = name;
+            this.url = url;
+            this.email = email;
+        }
 
         /**
          * 得到名字
