@@ -90,7 +90,10 @@ public class SwaggerConfigurationProperties
      * @param excludePath 排除路径
      * @param docket      摘要
      */
-    public SwaggerConfigurationProperties(String title, String group, String description, String version, Contact contact, String basePackage, List<String> basePath, List<String> excludePath, Map<String, DocketInfo> docket)
+    public SwaggerConfigurationProperties(String title, String group, String description,
+                                          String version, Contact contact, String basePackage,
+                                          List<String> basePath, List<String> excludePath,
+                                          Map<String, DocketInfo> docket)
     {
         this.title = title;
         this.group = group;
@@ -348,7 +351,9 @@ public class SwaggerConfigurationProperties
          * @param basePath    基本路径
          * @param excludePath 排除路径
          */
-        public DocketInfo(String title, String group, String description, String version, Contact contact, String basePackage, List<String> basePath, List<String> excludePath)
+        public DocketInfo(String title, String group, String description,
+                          String version, Contact contact, String basePackage,
+                          List<String> basePath, List<String> excludePath)
         {
             this.title = title;
             this.group = group;
